@@ -1,0 +1,582 @@
+/* Set the background colouring of listed works in bookmarks/search: this is done per rating */
+
+.blurb:has(span.rating-notrated.rating) {
+  background-color: #eceff1;
+}
+
+.blurb:has(span.rating-mature.rating) {
+  background-color: #ffebee;
+}
+
+.blurb:has(span.rating-explicit.rating) {
+  background-color: #f3e5f5;
+}
+
+.blurb:has(span.rating-teen.rating) {
+  background-color: #fff3e0;
+}
+
+.blurb:has(span.rating-general-audience.rating) {
+  background-color: #e8f5e9;
+}
+
+/* Remove the coloured background from my works. Change this link to change who's works are ignored. */
+
+.blurb:has(a[href$="users/Smiley5494/pseuds/Smiley5494"]) {
+  background-color: #e9e8e7 !important;
+}
+
+/* Tag colouring for warnings */
+
+a.tag[href*="Choose%20Not%20To%20Use%20Archive%20Warnings/works"],
+a.tag[href*="Graphic%20Depictions%20Of%20Violence/works"],
+a.tag[href*="Major%20Character%20Death/works"],
+a.tag[href*="Rape*s*Non-Con/works"],
+a.tag[href*="Underage%20Sex/works"] {
+  color: black;
+  background-color: #ef9a9a;
+}
+
+/* Border colour for tags with a border */
+
+a.tag[href*="Rape*s*Non-Con/works"],
+a.tag[href*="Underage%20Sex/works"] {
+  border-color: black;
+}
+
+/* sets no archive warnings apply to be green */
+
+a.tag[href*="tags/No%20Archive%20Warnings%20Apply/works"] {
+  color: black;
+  background-color: #a5d6a7;
+}
+
+/* category, ratings, and meta tags (category and ratings are for within the open fic, meta is for tags added to bookmarks) */
+.tags li.category a.tag,
+.work .category a.tag,
+.work .rating a.tag,
+.meta.tags a.tag {
+  color: black;
+  background-color: #e9e8e7;
+}
+
+/* Fandom tags! this is also for fandoms being listed on the dashboard page of authors */
+  
+h5.fandoms.heading a.tag,
+.work .fandom a.tag,
+h5.tags.heading a.tag,
+#user-fandoms.fandom.listbox.group li {
+  color: black;
+  background-color: #a5d6a7;
+}
+
+/* Relationship tags! */
+.tags li.relationships a.tag,
+.work .relationship a.tag {
+  color: black;
+  background-color: #90caf9;
+}
+  
+/* This changes the colour of "&" relationships */
+div:has(.commas) [class^="relationship"] a.tag[href*="%20*a*%20"] {
+  background-color: #80deea;
+  color: black;
+}
+
+/* Character tags! */
+.tags li.characters a.tag,
+.work .character a.tag {
+  color: black;
+  background-color: #facf66;
+}
+
+/* Freeform tags!! */
+.tags li.freeforms a.tag,
+.work .freeform a.tag {
+  color: black;
+  background-color: #d1c4e9;
+}
+
+/* this changes the colour of authors notes, and summaries within a work */
+div.preface.group {
+  background-color: #e9e8e7;
+}
+
+/* this is in the base code so it might not be needed here, but this makes the hover of the headings match */
+#header .primary li:not(.search):hover,
+#header .primary li a:hover {
+  color: #900 !important;
+}
+
+/* this next lot is from Zerafina's "Replace the Content Icons With Text Labels" skin. I basically changed nothing but the colouring. */
+:root {
+  --text: black;
+  --bckgnd: transparent;
+  --none: #e9e8e7;
+  --g: #a5d6a7;
+  --t: #facf66;
+  --m: #ef9a9a;
+  --e: #ef9a9a;
+  --ff: #ef9ad9;
+  --fm: #d1c4e9;
+  --gen: #a5d6a7;
+  --mm: #90caf9;
+  --other: #e9e8e7;
+  --cntw: #ef9a9a;
+  --warn: #ef9a9a;
+  --ext: #e9e8e7;
+  --wip: #ef9a9a;
+  --fin: #a5d6a7;
+}
+
+.blurb .header:has(ul.required-tags) .heading {
+  margin-left: 0;
+}
+
+.blurb ul.required-tags,
+.blurb ul.required-tags li,
+.blurb ul.required-tags li a,
+.blurb ul.required-tags li span,
+.blurb ul.required-tags li + li + li,
+.blurb ul.required-tags li + li + li + li {
+  display: block;
+  position: unset;
+  width: unset;
+  height: unset;
+  margin: unset;
+  padding: unset;
+  border: none;
+  background: unset;
+  font-size: 1em;
+  font-weight: initial;
+  text-transform: capitalize;
+  line-height: 1;
+  color: var(--text);
+}
+
+.blurb ul.required-tags {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.3em;
+  margin-top: 0.35em;
+  margin-bottom: 0;
+}
+
+.blurb ul.required-tags > li > a > span.warnings,
+.blurb ul.required-tags > li > a > span:not(:is(.warning-yes,
+.warning-choosenotto))::before {
+  display: block;
+  margin-block: 0.15em;
+  padding-block: 0.25em;
+  padding-inline: 0.35em;
+  border-radius: 5px;
+}
+
+.blurb ul.required-tags li a > span,
+.bookmark p.status a > span,
+.bookmark p.status .count,
+#symbols-key dl img,
+#bookmark-symbols-key img {
+  box-sizing: border-box;
+  border: none !important;
+  background-size: cover;
+  background-origin: border-box;
+  font-family: 'Atkinson Hyperlegible', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Helvetica, sans-serif, 'GNU Unifont', "Trebuchet MS", Calibri, sans-serif;
+}
+
+.blurb ul.required-tags > li > a > span:not(.warnings) > span.text {
+  display: none;
+}
+
+.index:not(.prompt) .blurb ul.required-tags > li:has(.warnings):not(:has(.warning-yes,
+.warning-choosenotto)),
+.index:not(.prompt) .blurb ul.required-tags > li > a > :is(.warning-yes,
+.warning-choosenotto) > span.text {
+  display: none;
+}
+
+.required-tags .warning-choosenotto {
+  background: var(--cntw) !important;
+}
+
+.index:not(.prompt) .required-tags .warning-choosenotto::before {
+  content: "CNTW";
+}
+
+.required-tags .warning-yes {
+  background: var(--warn) !important;
+}
+
+.index:not(.prompt) .required-tags .warning-yes::before {
+  content: "Warnings";
+}
+
+.required-tags .warning-no {
+  background: var(--none) !important;
+}
+
+.required-tags .external-work::before {
+  content: "External Work";
+  background: var(--ext) !important;
+}
+
+.required-tags .complete-no[Title*="in Progress" i]::before {
+  content: "WIP";
+  background: var(--wip);
+}
+
+.required-tags .complete-no[Title*="Unfulfilled" i]::before {
+  content: "Unfulfilled";
+  background: var(--wip);
+}
+
+.required-tags .complete-yes[Title*="Complete" i]::before {
+  content: "Complete";
+  background: var(--fin);
+}
+
+.required-tags .complete-yes[Title*="Filled" i]::before {
+  content: "Fulfilled";
+  background: var(--fin);
+}
+
+.required-tags .category-femslash::before {
+  content: "F/F";
+  background: var(--ff);
+}
+
+.required-tags .category-het::before {
+  content: "F/M";
+  background: var(--fm);
+}
+
+.required-tags .category-gen::before {
+  content: "Gen";
+  background: var(--gen);
+}
+
+.required-tags .category-slash::before {
+  content: "M/M";
+  background: var(--mm);
+}
+
+.required-tags .category-multi::before {
+  content: "Multi";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm), var(--gen));
+}
+
+.required-tags .category-other::before {
+  content: "Other";
+  background: var(--other);
+}
+
+.required-tags .category-none::before {
+  content: "No Category";
+  background: var(--none);
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i]::before {
+  content: "F/F, F/M";
+  background: linear-gradient(to right, var(--ff), var(--fm));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="Gen" i]::before {
+  content: "F/F, Gen";
+  background: linear-gradient(to right, var(--ff), var(--gen));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="M/M" i]::before {
+  content: "F/F, M/M";
+  background: linear-gradient(to right, var(--ff), var(--mm));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="Other" i]::before {
+  content: "F/F, Other";
+  background: linear-gradient(to right, var(--ff), var(--other));
+}
+
+.required-tags .category[Title*="F/M" i][Title*="Gen" i]::before {
+  content: "F/M, Gen";
+  background: linear-gradient(to right, var(--fm), var(--gen));
+}
+
+.required-tags .category[Title*="F/M" i][Title*="M/M" i]::before {
+  content: "F/M, M/M";
+  background: linear-gradient(to right, var(--fm), var(--mm));
+}
+
+.required-tags .category[Title*="F/M" i][Title*="Other" i]::before {
+  content: "F/M, Other";
+  background: linear-gradient(to right, var(--fm), var(--other));
+}
+
+.required-tags .category[Title*="M/M" i][Title*="Gen" i]::before {
+  content: "M/M, Gen";
+  background: linear-gradient(to right, var(--mm), var(--gen));
+}
+
+.required-tags .category[Title*="Gen" i][Title*="Other" i]::before {
+  content: "Gen, Other";
+  background: linear-gradient(to right, var(--gen), var(--other));
+}
+
+.required-tags .category[Title*="M/M" i][Title*="Other" i]::before {
+  content: "M/M, Other";
+  background: linear-gradient(to right, var(--mm), var(--other));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Gen" i]::before {
+  content: "F/F, F/M, Gen";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--gen));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="M/M" i]::before {
+  content: "F/F, F/M, M/M";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Other" i]::before {
+  content: "F/F, F/M, Other";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--other));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="M/M" i][Title*="Gen" i]::before {
+  content: "F/F, M/M, Gen";
+  background: linear-gradient(to right, var(--ff), var(--mm), var(--gen));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/F, Gen, Other";
+  background: linear-gradient(to right, var(--ff), var(--gen), var(--other));
+}
+
+.required-tags .category[Title*="F/M" i][Title*="M/M" i][Title*="Gen" i]::before {
+  content: "F/M, M/M, Gen";
+  background: linear-gradient(to right, var(--fm), var(--mm), var(--gen));
+}
+
+.required-tags .category[Title*="F/M" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/M, Gen, Other";
+  background: linear-gradient(to right, var(--fm), var(--gen), var(--other));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "F/F, M/M, Other";
+  background: linear-gradient(to right, var(--ff), var(--mm), var(--other));
+}
+
+.required-tags .category[Title*="F/M" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "F/M, M/M, Other";
+  background: linear-gradient(to right, var(--fm), var(--mm), var(--other));
+}
+
+.required-tags .category[Title*="Gen" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "M/M, Gen, Other";
+  background: linear-gradient(to right, var(--mm), var(--gen), var(--other));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Gen" i][Title*="M/M" i]::before {
+  content: "F/F, F/M, M/M, Gen";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm), var(--gen));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/F, F/M, Gen, Other";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--gen), var(--other));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "F/F, F/M, M/M, Other";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm), var(--other));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="M/M" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/F, M/M, Gen, Other";
+  background: linear-gradient(to right, var(--ff), var(--mm), var(--gen), var(--other));
+}
+
+.required-tags .category[Title*="F/M" i][Title*="M/M" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/M, M/M, Gen, Other";
+  background: linear-gradient(to right, var(--fm), var(--mm), var(--gen), var(--other));
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Gen" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "F/F, F/M, M/M, Gen, Other";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm), var(--gen), var(--other));
+}
+
+.required-tags .rating-general-audience::before {
+  content: "General";
+  background: var(--g);
+}
+
+.required-tags .rating-teen::before {
+  content: "Teen";
+  background: var(--t);
+}
+
+.required-tags .rating-mature::before {
+  content: "Mature";
+  background: var(--m);
+}
+
+.required-tags .rating-explicit::before {
+  content: "Explicit";
+  background: var(--e);
+}
+
+.required-tags .rating-notrated::before {
+  content: "Not Rated";
+  background: var(--none);
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i]::before {
+  content: "Gen, Teen";
+  background: linear-gradient(to right, var(--g), var(--t));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Mature" i]::before {
+  content: "Gen, Mature";
+  background: linear-gradient(to right, var(--g), var(--m));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Explicit" i]::before {
+  content: "Gen, Explicit";
+  background: linear-gradient(to right, var(--g), var(--e));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Not Rated" i]::before {
+  content: "Gen, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--none));
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Mature" i]::before {
+  content: "Teen, Mature";
+  background: linear-gradient(to right, var(--t), var(--m));
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Explicit" i]::before {
+  content: "Teen, Explicit";
+  background: linear-gradient(to right, var(--t), var(--e));
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Not Rated" i]::before {
+  content: "Teen, Not Rated";
+  background: linear-gradient(to right, var(--t), var(--none));
+}
+
+.required-tags .rating[Title*="Mature" i][Title*="Explicit" i]::before {
+  content: "Mature, Explicit";
+  background: linear-gradient(to right, var(--m), var(--e));
+}
+
+.required-tags .rating[Title*="Mature" i][Title*="Not Rated" i]::before {
+  content: "Mature, Not Rated";
+  background: linear-gradient(to right, var(--m), var(--none));
+}
+
+.required-tags .rating[Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Explicit, Not Rated";
+  background: linear-gradient(to right, var(--e), var(--none));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Mature" i]::before {
+  content: "Gen, Teen, Mature";
+  background: linear-gradient(to right, var(--g), var(--t), var(--m));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Explicit" i]::before {
+  content: "Gen, Teen, Explicit";
+  background: linear-gradient(to right, var(--g), var(--t), var(--e));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Not Rated" i]::before {
+  content: "Gen, Teen, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--t), var(--none));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Mature" i][Title*="Explicit" i]::before {
+  content: "Gen, Mature, Explicit";
+  background: linear-gradient(to right, var(--g), var(--m), var(--e));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Mature" i][Title*="Not Rated" i]::before {
+  content: "Gen, Mature, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--m), var(--none));
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Mature" i][Title*="Explicit" i]::before {
+  content: "Teen, Mature, Explicit";
+  background: linear-gradient(to right, var(--t), var(--m), var(--e));
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Mature" i][Title*="Not Rated" i]::before {
+  content: "Teen, Mature, Not Rated";
+  background: linear-gradient(to right, var(--t), var(--m), var(--none));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Gen, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--e), var(--none));
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Teen, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--t), var(--e), var(--none));
+}
+
+.required-tags .rating[Title*="Mature" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Mature, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--m), var(--e), var(--none));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Mature" i][Title*="Explicit" i]::before {
+  content: "Gen, Teen, Mature, Explicit";
+  background: linear-gradient(to right, var(--g), var(--t), var(--m), var(--e));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Mature" i][Title*="Not Rated" i]::before {
+  content: "Gen, Teen, Mature, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--t), var(--m), var(--none));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Gen, Teen, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--t), var(--e), var(--none));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Mature" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Gen, Mature, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--m), var(--e), var(--none));
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Mature" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Teen, Mature, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--t), var(--m), var(--e), var(--none));
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Mature" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Gen, Teen, Mature, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--t), var(--m), var(--e), var(--none));
+}
+
+/* this fixes the background colour of search and text boxes being missing. Idk why it was missing in the first place but hey this solves that. */
+form.search input[type=text],
+dd.autocomplete li.input,
+input[type=radio],
+select,
+input[type=checkbox],
+input[type=file],
+input.number,
+p input,
+p select,
+.heading select,
+li select,
+input:focus,
+select:focus,
+textarea:focus,
+input,
+textarea {
+  border-color: transparent !important;
+  background: #e9e8e7 !important;
+}
