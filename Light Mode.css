@@ -580,3 +580,11 @@ textarea {
   border-color: transparent !important;
   background: #e9e8e7 !important;
 }
+
+/* This adds the "beta" back to ao3's header, but changes it to read Light Mode instead. I just think it's neat. */
+#header > h1 > a > span::after {
+  content: " Light Mode";
+  vertical-align: super;
+  font-size: 14px;
+  font-style: italic;
+}
