@@ -11,8 +11,8 @@ Final step: hit use.
 
 Light Mode, Dark Mode, and Mobile Fix all use the "Media" section of advanced.
 
-Light Mode: Scroll on the media checkbox list to find "(prefers-color-scheme: Light)". Select that box, hit update.
-Dark Mode: Scroll on the media section to find "(prefers-color-scheme: Dark)". Select it.
-Mobile Fix: Scroll on the media section to find "only screen and (max-width: 42em)". Hit that checkbox. 
+- Light Mode: Scroll on the media checkbox list to find "(prefers-color-scheme: Light)". Select that box, hit update.
+- Dark Mode: Scroll on the media section to find "(prefers-color-scheme: Dark)". Select it.
+- Mobile Fix: Scroll on the media section to find "only screen and (max-width: 42em)". Hit that checkbox. 
 
 What this does is it ensures that these skins are only activated when certain criteria is met. The colour scheme one is fairly self explanatory: it uses the browser's theme to determine which one to use. The width one takes into account the dimensions of the browser, this means that shrinking the width of the browser on desktop will activate mobile mode. Tablet screens may be fucked up but yknow what that's a problem for future me. 
