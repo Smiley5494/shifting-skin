@@ -173,8 +173,13 @@ a.tag:hover,
 .listbox .heading a.tag:visited:hover,
 .symbol .question,
 .qtip-content {
-  background: #970000;
+  background: #E88D36;
   color: #111;
+}
+
+#footer a,
+#footer button {
+  color: #888;
 }
 
 .splash .favorite li:nth-of-type(odd) a:hover,
@@ -500,11 +505,17 @@ h5.tags.heading a.tag:hover,
   color: white !important;
 }
 
+/* Changes the question mark buttons to the orange text with a dark background */
+.symbol .question {
+  background: #2a2a2a;
+  color: #E88D36;
+}
+
 /* changes the font colour of h4 headings this is super important for work lists */
-h4.heading,
+/* h4.heading,
 h4.heading a {
   color: #888 !important;
-}
+} */
 
 /* Authors notes and summary background colours! */
 div.preface.group {
