@@ -834,6 +834,8 @@ img[src$="/images/lockred.png"] {
   content: url("/images/logo.png");
 }
 
+/* This removes navigation buttons that have no use, aka the previous page button when you're already on page 1. Comes from ravenothere */
+
 li.previous span.disabled,
 li.next span.disabled {
   display: none;
