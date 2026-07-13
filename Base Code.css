@@ -524,12 +524,12 @@ p.muted.notice {
 
 /* this hides the skins section from the footer */
 
-#footer .menu li:has([action="/skins/unset"]),
+/* #footer .menu li:has([action="/skins/unset"]),
 #footer .menu li:has([action="/skins/891/set"]),
 #footer .menu li:has([action="/skins/929/set"]),
 #footer .menu li:has([action="/skins/932/set"]) {
   display: none;
-}
+} */
 
 /* this hides the reject gift button */
 
