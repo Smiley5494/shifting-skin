@@ -21,8 +21,9 @@
 }
 
 /* Remove the coloured background from my works. Change this link to change who's works are ignored. */
-
+/* No Border on my own works — change this link to change who's works gets the border hidden */
 .blurb:has(a[href$="users/Smiley5494/pseuds/Smiley5494"]) {
+  border: none;
   background-color: #e9e8e7 !important;
 }
 
