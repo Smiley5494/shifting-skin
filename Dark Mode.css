@@ -210,6 +210,7 @@ span.claimed,
 span.requested,
 a.work,
 .blurb h4 a:link,
+.blurb h4 a:visited,
 .blurb h4 img,
 .splash .module h3,
 .splash .browse li a:before,
@@ -394,7 +395,7 @@ form dd.required {
   color: #dbbc54;
 }
 
-/* this is actually in the base code and can be deleted. */
+/* this is not actually redundant as it turns out*/
 .work.blurb:not(:has(dd[lang$="en"])) {
   border-color: #4F39F6 !important;
 }
@@ -497,13 +498,27 @@ tr:hover,
   box-shadow: none;
 }
 
-/* this changes the font colour to white on hover for fandom tags */
+/* this changes the colour of tags when they're hovered over */
+.tags li.freeforms a.tag:hover,
+.work .freeform a.tag:hover,
+.tags li.characters a.tag:hover,
+.work .character a.tag:hover,
 h5.fandoms.heading a.tag:hover,
 h5.tags.heading a.tag:hover,
 #user-fandoms.fandom.listbox.group li:hover,
-#user-fandoms.fandom.listbox.group a:hover {
-  color: white !important;
+#user-fandoms.fandom.listbox.group a:hover,
+.work .fandom a.tag:hover,
+.tags li.warnings a.tag:hover,
+.work .warning a.tag:hover,
+.tags li.relationships a.tag:hover,
+.work .relationship a.tag:hover,
+.work .category a.tag:hover,
+.work .rating a.tag:hover,
+.meta.tags a.tag:hover {
+  background-color: #E88D36 !important;
+  color: black !important;
 }
+
 
 /* Changes the question mark buttons to the orange text with a dark background */
 .symbol .question {
