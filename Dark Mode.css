@@ -538,6 +538,7 @@ div.preface.group {
 }
 
 /* I hate all these colours but they're easy enough to distinguish and not hell on the eyes with a dark background and light text. */
+/*
 .blurb:has(span.rating-notrated.rating),
 .blurb:has(span.rating-explicit.rating) {
   background-color: #3b2e3e;
@@ -554,10 +555,10 @@ div.preface.group {
 .blurb:has(span.rating-general-audience.rating) {
   background-color: #2e3e2f;
 }
-
+*/
 /* this changes the background colour of my works in the list to the preface background colour. */
 .blurb:has(a[href$="users/Smiley5494/pseuds/Smiley5494"]) {
-  background-color: #2A2A2A !important;
+  border: 2px solid #2A2A2A !important;
 }
 
 /* This makes the text in paragraphs have a gradient. It's blue because that's easiest on my eyes, and it makes each line a different colour in larger paragraphs. */
