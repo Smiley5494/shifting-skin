@@ -575,10 +575,11 @@ div.preface.group {
   -moz-text-fill-color: transparent;
 }
 
-/* This makes the hover for the headings that orange colour */
+/* This makes the hover for the headings and links that orange colour */
 
 #header .primary li:not(.search):hover,
-#header .primary li a:hover {
+#header .primary li a:hover,
+a:hover {
   color: #E88D36 !important;
 }
 
