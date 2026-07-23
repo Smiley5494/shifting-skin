@@ -415,12 +415,29 @@ blockquote.userstuff,
 blockquote pre,
 .blurb p:not(.datetime):not(p.actions) {
   background-color: #dddddd;
-  background-image: linear-gradient(#B2D6FA, #84C2EB, #A1EFF7);
+  background-image: radial-gradient(#50A8E2, #50A8E2, #C5EBC3, #50A8E2, #50A8E2);
   background-size: 100% 150%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+/* changes the colour of bold */
+b,
+strong {
+  background-color: #CA97D8;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+
+/* and italics */
+i,
+em,
+cite {
+  background-color: #DEBDEF;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
 }
 
 /* background colour of notes/summaries */
@@ -530,4 +547,732 @@ div:has(.commas) [class^="relationship"] a.tag[href*="%20*a*%20"] {
 /* my works border colour */
 .blurb:has(a[href$="users/Smiley5494/pseuds/Smiley5494"]) {
   border: 2px solid #2A2A2A !important;
+}
+
+/* changes the icons to words */
+:root {
+  --text: black;
+  --bckgnd: transparent;
+  --none: #e9e8e7;
+  --g: #a5d6a7;
+  --t: #facf66;
+  --m: #ef9a9a;
+  --e: #ef9a9a;
+  --ff: #ef9ad9;
+  --fm: #d1c4e9;
+  --gen: #a5d6a7;
+  --mm: #90caf9;
+  --other: #e9e8e7;
+  --cntw: #ef9a9a;
+  --warn: #ef9a9a;
+  --ext: #e9e8e7;
+  --wip: #ef9a9a;
+  --fin: #a5d6a7;
+}
+
+.blurb .header:has(ul.required-tags) .heading {
+  margin-left: 0;
+}
+
+.blurb ul.required-tags,
+.blurb ul.required-tags li,
+.blurb ul.required-tags li a,
+.blurb ul.required-tags li span,
+.blurb ul.required-tags li + li + li,
+.blurb ul.required-tags li + li + li + li {
+  display: block;
+  position: unset;
+  width: unset;
+  height: unset;
+  margin: unset;
+  padding: unset;
+  border: none;
+  background: unset;
+  font-size: 1em;
+  font-weight: initial;
+  text-transform: capitalize;
+  line-height: 1;
+  color: var(--text);
+}
+
+.blurb ul.required-tags {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.3em;
+  margin-top: 0.35em;
+  margin-bottom: 0;
+}
+
+.blurb ul.required-tags > li > a > span.warnings,
+.blurb ul.required-tags > li > a > span:not(:is(.warning-yes,
+.warning-choosenotto))::before {
+  display: block;
+  margin-block: 0.15em;
+  padding-block: 0.25em;
+  padding-inline: 0.35em;
+  border-radius: 5px;
+}
+
+.blurb ul.required-tags li a > span,
+.bookmark p.status a > span,
+.bookmark p.status .count,
+#symbols-key dl img,
+#bookmark-symbols-key img {
+  box-sizing: border-box;
+  border: none !important;
+  background-size: cover;
+  background-origin: border-box;
+  font-family: 'Atkinson Hyperlegible', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Helvetica, sans-serif, 'GNU Unifont', "Trebuchet MS", Calibri, sans-serif;
+}
+
+.blurb ul.required-tags > li > a > span:not(.warnings) > span.text {
+  display: none;
+}
+
+.index:not(.prompt) .blurb ul.required-tags > li:has(.warnings):not(:has(.warning-yes,
+.warning-choosenotto)),
+.index:not(.prompt) .blurb ul.required-tags > li > a > :is(.warning-yes,
+.warning-choosenotto) > span.text {
+  display: none;
+}
+
+.required-tags .warning-choosenotto {
+  color: var(--cntw) !important;
+}
+
+.index:not(.prompt) .required-tags .warning-choosenotto::before {
+  content: "CNTW";
+}
+
+.required-tags .warning-yes {
+  color: var(--warn) !important;
+}
+
+.index:not(.prompt) .required-tags .warning-yes::before {
+  content: "Warnings";
+}
+
+.required-tags .warning-no {
+  color: var(--none) !important;
+}
+
+.required-tags .external-work::before {
+  content: "External Work";
+  background: var(--ext) !important;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .complete-no[Title*="in Progress" i]::before {
+  content: "WIP";
+  background: var(--wip);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .complete-no[Title*="Unfulfilled" i]::before {
+  content: "Unfulfilled";
+  background: var(--wip);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .complete-yes[Title*="Complete" i]::before {
+  content: "Complete";
+  background: var(--fin);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .complete-yes[Title*="Filled" i]::before {
+  content: "Fulfilled";
+  background: var(--fin);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category-femslash::before {
+  content: "F/F";
+  background: var(--ff);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category-het::before {
+  content: "F/M";
+  background: var(--fm);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category-gen::before {
+  content: "Gen";
+  background: var(--gen);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category-slash::before {
+  content: "M/M";
+  background: var(--mm);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category-multi::before {
+  content: "Multi";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm), var(--gen));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category-other::before {
+  content: "Other";
+  background: var(--other);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category-none::before {
+  content: "No Category";
+  background: var(--none);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i]::before {
+  content: "F/F, F/M";
+  background: linear-gradient(to right, var(--ff), var(--fm));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="Gen" i]::before {
+  content: "F/F, Gen";
+  background: linear-gradient(to right, var(--ff), var(--gen));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="M/M" i]::before {
+  content: "F/F, M/M";
+  background: linear-gradient(to right, var(--ff), var(--mm));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="Other" i]::before {
+  content: "F/F, Other";
+  background: linear-gradient(to right, var(--ff), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/M" i][Title*="Gen" i]::before {
+  content: "F/M, Gen";
+  background: linear-gradient(to right, var(--fm), var(--gen));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/M" i][Title*="M/M" i]::before {
+  content: "F/M, M/M";
+  background: linear-gradient(to right, var(--fm), var(--mm));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/M" i][Title*="Other" i]::before {
+  content: "F/M, Other";
+  background: linear-gradient(to right, var(--fm), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="M/M" i][Title*="Gen" i]::before {
+  content: "M/M, Gen";
+  background: linear-gradient(to right, var(--mm), var(--gen));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="Gen" i][Title*="Other" i]::before {
+  content: "Gen, Other";
+  background: linear-gradient(to right, var(--gen), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="M/M" i][Title*="Other" i]::before {
+  content: "M/M, Other";
+  background: linear-gradient(to right, var(--mm), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Gen" i]::before {
+  content: "F/F, F/M, Gen";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--gen));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="M/M" i]::before {
+  content: "F/F, F/M, M/M";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Other" i]::before {
+  content: "F/F, F/M, Other";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="M/M" i][Title*="Gen" i]::before {
+  content: "F/F, M/M, Gen";
+  background: linear-gradient(to right, var(--ff), var(--mm), var(--gen));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/F, Gen, Other";
+  background: linear-gradient(to right, var(--ff), var(--gen), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/M" i][Title*="M/M" i][Title*="Gen" i]::before {
+  content: "F/M, M/M, Gen";
+  background: linear-gradient(to right, var(--fm), var(--mm), var(--gen));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/M" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/M, Gen, Other";
+  background: linear-gradient(to right, var(--fm), var(--gen), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "F/F, M/M, Other";
+  background: linear-gradient(to right, var(--ff), var(--mm), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/M" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "F/M, M/M, Other";
+  background: linear-gradient(to right, var(--fm), var(--mm), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="Gen" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "M/M, Gen, Other";
+  background: linear-gradient(to right, var(--mm), var(--gen), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Gen" i][Title*="M/M" i]::before {
+  content: "F/F, F/M, M/M, Gen";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm), var(--gen));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/F, F/M, Gen, Other";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--gen), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "F/F, F/M, M/M, Other";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="M/M" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/F, M/M, Gen, Other";
+  background: linear-gradient(to right, var(--ff), var(--mm), var(--gen), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/M" i][Title*="M/M" i][Title*="Gen" i][Title*="Other" i]::before {
+  content: "F/M, M/M, Gen, Other";
+  background: linear-gradient(to right, var(--fm), var(--mm), var(--gen), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .category[Title*="F/F" i][Title*="F/M" i][Title*="Gen" i][Title*="M/M" i][Title*="Other" i]::before {
+  content: "F/F, F/M, M/M, Gen, Other";
+  background: linear-gradient(to right, var(--ff), var(--fm), var(--mm), var(--gen), var(--other));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating-general-audience::before {
+  content: "General";
+  background: var(--g);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating-teen::before {
+  content: "Teen";
+  background: var(--t);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating-mature::before {
+  content: "Mature";
+  background: var(--m);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating-explicit::before {
+  content: "Explicit";
+  background: var(--e);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating-notrated::before {
+  content: "Not Rated";
+  background: var(--none);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i]::before {
+  content: "Gen, Teen";
+  background: linear-gradient(to right, var(--g), var(--t));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Mature" i]::before {
+  content: "Gen, Mature";
+  background: linear-gradient(to right, var(--g), var(--m));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Explicit" i]::before {
+  content: "Gen, Explicit";
+  background: linear-gradient(to right, var(--g), var(--e));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Not Rated" i]::before {
+  content: "Gen, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Mature" i]::before {
+  content: "Teen, Mature";
+  background: linear-gradient(to right, var(--t), var(--m));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Explicit" i]::before {
+  content: "Teen, Explicit";
+  background: linear-gradient(to right, var(--t), var(--e));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Not Rated" i]::before {
+  content: "Teen, Not Rated";
+  background: linear-gradient(to right, var(--t), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Mature" i][Title*="Explicit" i]::before {
+  content: "Mature, Explicit";
+  background: linear-gradient(to right, var(--m), var(--e));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Mature" i][Title*="Not Rated" i]::before {
+  content: "Mature, Not Rated";
+  background: linear-gradient(to right, var(--m), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Explicit, Not Rated";
+  background: linear-gradient(to right, var(--e), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Mature" i]::before {
+  content: "Gen, Teen, Mature";
+  background: linear-gradient(to right, var(--g), var(--t), var(--m));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Explicit" i]::before {
+  content: "Gen, Teen, Explicit";
+  background: linear-gradient(to right, var(--g), var(--t), var(--e));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Not Rated" i]::before {
+  content: "Gen, Teen, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--t), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Mature" i][Title*="Explicit" i]::before {
+  content: "Gen, Mature, Explicit";
+  background: linear-gradient(to right, var(--g), var(--m), var(--e));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Mature" i][Title*="Not Rated" i]::before {
+  content: "Gen, Mature, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--m), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Mature" i][Title*="Explicit" i]::before {
+  content: "Teen, Mature, Explicit";
+  background: linear-gradient(to right, var(--t), var(--m), var(--e));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Mature" i][Title*="Not Rated" i]::before {
+  content: "Teen, Mature, Not Rated";
+  background: linear-gradient(to right, var(--t), var(--m), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Gen, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--e), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Teen, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--t), var(--e), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Mature" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Mature, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--m), var(--e), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Mature" i][Title*="Explicit" i]::before {
+  content: "Gen, Teen, Mature, Explicit";
+  background: linear-gradient(to right, var(--g), var(--t), var(--m), var(--e));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Mature" i][Title*="Not Rated" i]::before {
+  content: "Gen, Teen, Mature, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--t), var(--m), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Gen, Teen, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--t), var(--e), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Mature" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Gen, Mature, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--m), var(--e), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Teen" i][Title*="Mature" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Teen, Mature, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--t), var(--m), var(--e), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.required-tags .rating[Title*="Gen" i][Title*="Teen" i][Title*="Mature" i][Title*="Explicit" i][Title*="Not Rated" i]::before {
+  content: "Gen, Teen, Mature, Explicit, Not Rated";
+  background: linear-gradient(to right, var(--g), var(--t), var(--m), var(--e), var(--none));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
