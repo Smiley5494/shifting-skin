@@ -464,7 +464,9 @@ div:has(.commas) [class^="relationship"] a.tag[href*="%20*a*%20"] {
   background-color: #2A2A2A;
 }
 
-/* baseline text colouring. This changes everything to lower contrast text. */
+/* baseline text colouring. This changes everything to lower contrast text. 
+This also changes the background colour of everything other than the heading bars & the hover menus. 
+buttons also do not change */
 body,
 .group,
 .group .group,
