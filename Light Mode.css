@@ -592,7 +592,6 @@ textarea {
 
 /* solves the missing footer issue, and matches the heading stripe to the rest of the colour scheme */
 #header ul.primary,
-#outer #footer,
-.toggled form {
+#outer #footer {
   background: #900900;
 }
