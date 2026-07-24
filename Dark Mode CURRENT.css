@@ -1,4 +1,56 @@
-/* AO3 REVERSI */
+/* Colours for the entire code */
+:root {
+  --accent: #50A8E2;
+
+  --text: #eee;
+  --prfcClr: #2a2a2a;
+  --UI_ftr: #111;
+  --brdr2: #222;
+  --bckgnd: #333;
+  --brdr5: #555;
+  --announcementvisited: #666;
+  --hvr_fcs: #999;
+
+  /* Rating colours */
+  --none: #e9e8e7;
+  --g: #a5d6a7;
+  --t: #facf66;
+  --m: #ef9a9a;
+  --e: #ef9a9a;
+
+  /* ships colours */
+  --ff: #ef9ad9;
+  --fm: #d1c4e9;
+  --gen: #a5d6a7;
+  --mm: #90caf9;
+  --other: #e9e8e7;
+
+  /* warnings */
+  --cntw: #ef9a9a;
+  --warn: #ef9a9a;
+  --ext: #e9e8e7;
+  --wip: #ef9a9a;
+  --fin: #a5d6a7;
+
+  /* languages and body text colours */
+  --en: #169f06;
+  --lang: #9E91FF;
+  --blockquotes: #3AACFF;
+  --italics: #debdef;
+  --bold: #ca97d8;
+  --grdnt: #c5ebc3;
+
+  /* tag colours */
+  --meta: #e9e8e7;
+  --warning: #ef9a9a;
+  --fandom: #a5d6a7;
+  --relationship/: #90caf9;
+  --relationship&: #80deea;
+  --chara: #facf66;
+  --freeform: #d1c4e9;
+}
+
+/* AO3 Reversi */
 #outer .region,
 #footer .group,
 .post fieldset fieldset,
@@ -6,6 +58,7 @@ fieldset fieldset {
   background: none;
 }
 
+/* changes the colour of the text */
 body,
 .group,
 .group .group,
@@ -38,13 +91,14 @@ div.dynamic,
 #ui-datepicker-div,
 .ui-datepicker table,
 .annotation {
-  background: #333;
-  color: #eee;
-  border-color: #222;
-  outline: #111;
+  background: var(--bckgnd);
+  color: var(--text);
+  border-color: var(--brdr2);
+  outline: var(--UI_ftr);
   box-shadow: none;
 }
 
+/* headers, menus, and backgrounds */
 #header .actions a:hover,
 #header .actions a:focus,
 #header .dropdown:hover a,
@@ -67,7 +121,7 @@ th,
 .javascript .work.navigation .download .secondary,
 .thread .even,
 .ui-datepicker tr:hover {
-  background: #2a2a2a;
+  background: var(--prfcClr);
 }
 
 #header .dropdown .menu a:hover,
@@ -76,7 +130,7 @@ th,
 .ui-datepicker td:hover,
 #tos_prompt .heading,
 #tos_prompt [disabled] {
-  background: #111;
+  background: var(--UI_ftr);
 }
 
 #outer,
@@ -84,15 +138,17 @@ th,
 .statistics .index li:nth-of-type(even),
 #tos_prompt,
 .nomination dt {
-  background: #333;
+  background: var(--bckgnd);
 }
 
+/* this is the grey noise */
 #header ul.primary,
 #outer #footer,
 .toggled form {
   background: url("/images/skins/textures/tiles/black-noise.jpg");
 }
 
+/* backgrounds for meta and boxes */
 #header ul.primary,
 #footer,
 #dashboard ul,
@@ -112,9 +168,10 @@ form.single fieldset,
 .splash .news li,
 .authentication fieldset,
 .filters .group dt.bookmarker {
-  border-color: #555;
+  border-color: var(--brdr5);
 }
 
+/* shadows */
 .group.listbox,
 fieldset fieldset.listbox,
 #main li.blurb,
@@ -126,9 +183,10 @@ fieldset fieldset.listbox,
 form blockquote.userstuff,
 .thread .comment,
 .toggled form {
-  box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px var(--UI_ftr);
 }
 
+/* backgrounds and borders */
 #dashboard .current,
 .actions a:active,
 #outer .current,
@@ -145,24 +203,27 @@ dl.index dd,
 .unwrangled,
 .unreviewed,
 .ui-sortable li:hover {
-  background: #000;
-  border-color: #555;
-  box-shadow: -1px -1px 3px #000;
+  background: var(--UI_ftr);
+  border-color: var(--brdr5);
+  box-shadow: -1px -1px 3px var(--UI_ftr);
 }
 
+/* text boxes when selected iirc */
 input,
 textarea {
-  box-shadow: inset 0 1px 2px #000;
+  box-shadow: inset 0 1px 2px var(--UI_ftr);
 }
 
+/* shadows on blurbs and indexes */
 li.blurb,
 .blurb .blurb,
 .listbox .index,
 fieldset fieldset.listbox,
 .dashboard .listbox .index {
-  box-shadow: inset 1px 1px 3px #000;
+  box-shadow: inset 1px 1px 3px var(--UI_ftr);
 }
 
+/* hover on footers and autocomplete stuff */
 #footer a:hover,
 #footer a:focus,
 #footer button:hover,
@@ -173,16 +234,18 @@ a.tag:hover,
 .listbox .heading a.tag:visited:hover,
 .symbol .question,
 .qtip-content {
-  background: #50A8E2;
-  color: #111;
+  background: var(--accent);
+  color: var(--UI_ftr);
 }
 
+/* favourite tags on the home page */
 .splash .favorite li:nth-of-type(odd) a:hover,
 .splash .favorite li:nth-of-type(odd) a:focus {
-  background: #50A8E2;
-  color: #111;
+  background: var(--accent);
+  color: var(--UI_ftr);
 }
 
+/* header colours, actions, warnings, kudos */
 #header #greeting img,
 #header .heading a,
 #header .heading a:visited,
@@ -215,9 +278,10 @@ a.work,
 a.cloud7,
 a.cloud8,
 #tos_prompt .heading {
-  color: #50A8E2;
+  color: var(--accent);
 }
 
+/* greetings, warnings, errors */
 #greeting .icon,
 #dashboard,
 #dashboard.own,
@@ -231,9 +295,10 @@ input.LV_invalid_field:active,
 textarea.LV_invalid_field:hover,
 textarea.LV_invalid_field:active,
 .qtip-content {
-  border-color: #50A8E2;
+  border-color: var(--accent);
 }
 
+/* links and text on dropdowns */
 a,
 a:link,
 a.tag,
@@ -250,18 +315,20 @@ a.tag,
 .heading,
 .group .heading,
 .filters dt a:hover {
-  color: #fff;
+  color: var(--text);
 }
 
+/* previously visited links */
 a:visited,
 .actions a:visited,
 .action a:link,
 .action a:visited,
 .listbox .heading a:visited,
 span.series .divider {
-  color: #999;
+  color: var(--hvr_fcs);
 }
 
+/* actions & search box */
 .actions a,
 .actions a:link,
 .action,
@@ -273,13 +340,14 @@ button,
 .current,
 .actions label,
 #header .actions a {
-  background: #555;
-  border-color: #222;
-  color: #eee;
-  box-shadow: inset 0 -8px 4px #232323, inset 0 8px 7px #555;
+  background: var(--brdr5);
+  border-color: var(--brdr2);
+  color: var(--text);
+  box-shadow: inset 0 -8px 4px var(--brdr2), inset 0 8px 7px var(--brdr5);
   text-shadow: none;
 }
 
+/* hover on buttons & actions */
 .actions a:hover,
 .actions button:hover,
 .actions input:hover,
@@ -291,28 +359,29 @@ label.action:hover,
 .actions input:focus,
 #dashboard a:focus,
 .actions .disabled select {
-  color: #999;
-  border-color: #000;
-  box-shadow: inset 2px 2px 2px #000;
+  color: var(--hvr_fcs);
+  border-color: var(--UI_ftr);
+  box-shadow: inset 2px 2px 2px var(--UI_ftr);
 }
-
+/* buttons when selected */
 .actions a:active,
 .current,
 a.current,
 .current a:visited {
-  color: #fff;
-  background: #555;
-  border-color: #fff;
-  box-shadow: inset 1px 1px 3px #333;
+  color: var(--text);
+  background: var(--brdr5);
+  border-color: var(--text);
+  box-shadow: inset 1px 1px 3px var(--bckgnd);
 }
 
+/* im not sure what this is */
 .delete a,
 span.delete {
-  box-shadow: -1px -1px 2px rgba(255,255,255.25);
+  box-shadow: -1px -1px 2px var(--brdr5);
 }
 
 .actions label.disabled {
-  background: #222;
+  background: var(--brdr2);
   box-shadow: none;
 }
 
@@ -323,6 +392,7 @@ ul.required-tags,
   border: 0;
 }
 
+/* headers & outer sections */
 #outer .group .heading,
 #header .actions a,
 fieldset.listbox .heading,
@@ -330,7 +400,7 @@ fieldset.listbox .heading,
 .heading,
 .userstuff h2 {
   text-shadow: none;
-  color: #fff;
+  color: var(--text);
   background: none;
 }
 
@@ -346,52 +416,53 @@ fieldset fieldset.listbox {
   outline: none;
 }
 
+/* required sections on forms & areas */
 form dd.required {
-  color: #eee;
+  color: var(--text);
 }
 
 .mce-container input:focus {
-  background: #F3EFEC;
+  background: var(--text);
 }
 
+/* announcements */
 .announcement .userstuff a,
 .announcement .userstuff a:link,
 .announcement .userstuff a:visited:hover {
-  color: #111;
+  color: var(--UI_ftr);
 }
 
 .announcement .userstuff a:visited {
-  color: #666;
+  color: var(--announcementvisited);
 }
 
 .announcement .userstuff a:hover,
 .announcement .userstuff a:focus {
-  color: #999;
+  color: var(--hvr_fcs);
 }
 
 .event.announcement .userstuff a,
 .filters .expander {
-  color: #eee;
+  color: var(--text);
 }
 
 .announcement .action {
-  background: #333;
+  background: var(--bckgnd);
 }
 
 .announcement .action:hover,
 .announcement .action:focus {
-  color: #fff;
-  box-shadow: inset 2px 2px 2px #000;
+  color: var(--text);
+  box-shadow: inset 2px 2px 2px var(--UI_ftr);
 }
 
+/* i dont know what caution is */
 .caution {
   border-color: #807640;
   color: #dbbc54;
 }
 
-
-/* MY ADDITIONS */
-/* Add dark mode to the header in the place of where the beta was */
+/* the text where the Beta was */
 #header > h1 > a > span::after {
   content: " Dark Mode";
   vertical-align: super;
@@ -399,13 +470,13 @@ form dd.required {
   font-style: italic;
 }
 
-/* Change the colour of the ao3 logo to match the rest of the colour scheme */
+/* change the header logo to match the accent colour. This was actually done before that colour, i was originally trying to get it to match reversi's blue but alas */
 #header .logo {
   filter: brightness(0) saturate(100%) invert(60%) sepia(87%) saturate(545%) hue-rotate(180deg) brightness(96%) contrast(80%);
   -webkit-filter: brightness(0) saturate(100%) invert(60%) sepia(87%) saturate(545%) hue-rotate(180deg) brightness(96%) contrast(80%);
 }
 
-/* Change the body text to a super subtle gradient */
+/* the gradient text */
 #workskin p,
 .system p,
 .news p,
@@ -415,7 +486,7 @@ blockquote.userstuff,
 blockquote pre,
 .blurb p:not(.datetime):not(p.actions) {
   background-color: #dddddd;
-  background-image: radial-gradient(#50A8E2, #50A8E2, #C5EBC3, #50A8E2, #50A8E2);
+  background-image: radial-gradient(var(--accent), var(--accent), var(--grdnt), var(--accent), var(--accent);
   background-size: 100% 150%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -423,29 +494,34 @@ blockquote pre,
   -moz-text-fill-color: transparent;
 }
 
-/* changes the colour of bold */
+/* bold text colour */
 b,
 strong {
-  background-color: #CA97D8;
+  background-color: var(--bold);
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
 
-/* and italics */
+/* italics text colour */
 i,
 em,
 cite {
-  background-color: #DEBDEF;
+  background-color: var(--italics);
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
 
-/* background colour of notes/summaries */
-div.preface.group {
-  background-color: #2A2A2A;
+/* blockquote line colour */
+.userstuff blockquote {
+  border-inline-start: 2px solid var(--blockquotes);
 }
 
-/* hover over tags colouring */
+/* the background colouring of author's notes and summary */
+div.preface.group {
+  background-color: var(--prfcClr);
+}
+
+/* the colour of hovering over tags */
 .tags li.freeforms a.tag:hover,
 .work .freeform a.tag:hover,
 .tags li.characters a.tag:hover,
@@ -462,114 +538,122 @@ h5.tags.heading a.tag:hover,
 .work .category a.tag:hover,
 .work .rating a.tag:hover,
 .meta.tags a.tag:hover {
-  background-color: #50A8E2 !important;
+  background-color: var(--accent) !important;
   color: black !important;
+  -webkit-background-clip: none;
+  -moz-background-clip: none;
 }
 
-/* Warning tags */
+/* warning tags */
 a.tag[href*="Choose%20Not%20To%20Use%20Archive%20Warnings/works"],
 a.tag[href*="Graphic%20Depictions%20Of%20Violence/works"],
 a.tag[href*="Major%20Character%20Death/works"],
 a.tag[href*="Rape*s*Non-Con/works"],
 a.tag[href*="Underage%20Sex/works"] {
-  color: #ef9a9a;
-  background-color: #2A2A2A;
+  color: var(--warning) !important;
+  background-color: var(--prfcClr) !important;
+  -webkit-background-clip: none;
+  -moz-background-clip: none;
 }
 
-/* sex-related warning tags */
 a.tag[href*="Rape*s*Non-Con/works"],
 a.tag[href*="Underage%20Sex/works"] {
-  border-color: #ef9a9a;
+  border-color: var(--warning);
 }
 
-/* No archive warning apply tag */
+/* no archive warnings apply tags. Matches fandom tag colours */
 a.tag[href*="tags/No%20Archive%20Warnings%20Apply/works"] {
-  color: #a5d6a7;
-  background-color: #2A2A2A;
+  color: var(--fandom);
+  background-color: var(--prfcClr);
 }
 
-/* meta/category/rating tags */
+/* meta tags: category, ratings, meta */
 .tags li.category a.tag,
 .work .category a.tag,
 .work .rating a.tag,
 .meta.tags a.tag {
-  color: #e9e8e7;
-  background-color: #2A2A2A;
+  color: var(--meta);
+  background-color: var(--prfcClr);
 }
 
-/* fandom tags */
+/* fandom tags. This includes the fandom listing on the user dashboard */
 h5.fandoms.heading a.tag,
 .work .fandom a.tag,
 h5.tags.heading a.tag,
 #user-fandoms.fandom.listbox.group li,
 #user-fandoms.fandom.listbox.group a {
-  color: #a5d6a7;
-  background-color: #2A2A2A;
+  color: var(--fandom);
+  background-color: var(--prfcClr);
 }
 
-/* relationship tags */
+/* relationship / tags */
 .tags li.relationships a.tag,
 .work .relationship a.tag {
-  color: #90caf9;
-  background-color: #2A2A2A;
+  color: var(--relationship/);
+  background-color: var(--prfcClr);
 }
 
-/* & relationship tags */
+/* relationship & tags */
 div:has(.commas) [class^="relationship"] a.tag[href*="%20*a*%20"] {
-  color: #80deea;
-  background-color: #2A2A2A;
+  color: var(--relationship&);
+  background-color: var(--prfcClr);
 }
 
 /* character tags */
 .tags li.characters a.tag,
 .work .character a.tag {
-  color: #facf66;
-  background-color: #2A2A2A;
+  color: var(--chara);
+  background-color: var(--prfcClr);
 }
 
 /* freeform tags */
 .tags li.freeforms a.tag,
 .work .freeform a.tag {
-  color: #d1c4e9;
-  background-color: #2A2A2A;
+  color: var(--freeform);
+  background-color: var(--prfcClr);
 }
 
-/* not english language border colour */
+/* the border on unrated works */
+.blurb:has(span.rating-notrated.rating) {
+  border: 3px solid var(--none) !important;
+}
+
+/* the border on mature works */
+.blurb:has(span.rating-mature.rating) {
+  border: 3px solid var(--m) !important;
+}
+
+/* the border on explicit works */
+.blurb:has(span.rating-explicit.rating) {
+  border: 3px solid var(--e) !important;
+}
+
+/* the border on teen works */
+.blurb:has(span.rating-teen.rating) {
+  border: 3px solid var(--t) !important;
+}
+
+/* the border on gen rated works */
+.blurb:has(span.rating-general-audience.rating) {
+  border: 3px solid var(--g) !important;
+}
+
+/* the colour of datetime and stats on works that aren't in english. */
 .work.blurb:not(:has(dd[lang$="en"])) {
-  border-color: #4F39F6 !important;
+  color: var(--lang) !important;
 }
 
-/* english language border colour */
+/* the colour of datetime and stats on works that are in english */
 .blurb:has(dd[lang=en]) {
-  border-color: #169f06 !important;
+  color: var(--en) !important;
 }
 
-/* my works border colour */
+/* the colour of text on my works */
 .blurb:has(a[href$="users/Smiley5494/pseuds/Smiley5494"]) {
-  border: 2px solid #2A2A2A !important;
+  color: var(--text) !important;
 }
 
-/* changes the icons to words */
-:root {
-  --text: black;
-  --bckgnd: transparent;
-  --none: #e9e8e7;
-  --g: #a5d6a7;
-  --t: #facf66;
-  --m: #ef9a9a;
-  --e: #ef9a9a;
-  --ff: #ef9ad9;
-  --fm: #d1c4e9;
-  --gen: #a5d6a7;
-  --mm: #90caf9;
-  --other: #e9e8e7;
-  --cntw: #ef9a9a;
-  --warn: #ef9a9a;
-  --ext: #e9e8e7;
-  --wip: #ef9a9a;
-  --fin: #a5d6a7;
-}
-
+/* the following changes the squares on works to the text under the fandom tags */
 .blurb .header:has(ul.required-tags) .heading {
   margin-left: 0;
 }
