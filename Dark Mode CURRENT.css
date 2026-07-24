@@ -38,7 +38,8 @@
   --blockquotes: #3AACFF;
   --italics: #debdef;
   --bold: #ca97d8;
-  --grdnt: #c5ebc3;
+  --grdntcntr: #c5ebc3;
+  --grdnttr: #50A8E2;
 
   /* tag colours */
   --meta: #e9e8e7;
@@ -492,7 +493,7 @@ blockquote.userstuff,
 blockquote pre,
 .blurb p:not(.datetime):not(p.actions) {
   background-color: #dddddd;
-  background-image: radial-gradient(var(--accent), var(--accent), var(--grdnt), var(--accent), var(--accent));
+  background-image: radial-gradient(var(--grdnttr), var(--grdnttr), var(--grdntcntr), var(--grdnttr), var(--grdnttr));
   background-size: 100% 150%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
