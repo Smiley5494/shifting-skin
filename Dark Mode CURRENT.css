@@ -44,8 +44,8 @@
   --meta: #e9e8e7;
   --warning: #ef9a9a;
   --fandom: #a5d6a7;
-  --relationship/: #90caf9;
-  --relationship&: #80deea;
+  --slashrelationship: #90caf9;
+  --atrelationship: #80deea;
   --chara: #facf66;
   --freeform: #d1c4e9;
 }
@@ -486,7 +486,7 @@ blockquote.userstuff,
 blockquote pre,
 .blurb p:not(.datetime):not(p.actions) {
   background-color: #dddddd;
-  background-image: radial-gradient(var(--accent), var(--accent), var(--grdnt), var(--accent), var(--accent);
+  background-image: radial-gradient(var(--accent), var(--accent), var(--grdnt), var(--accent), var(--accent));
   background-size: 100% 150%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -589,13 +589,13 @@ h5.tags.heading a.tag,
 /* relationship / tags */
 .tags li.relationships a.tag,
 .work .relationship a.tag {
-  color: var(--relationship/);
+  color: var(--slashrelationship);
   background-color: var(--prfcClr);
 }
 
 /* relationship & tags */
 div:has(.commas) [class^="relationship"] a.tag[href*="%20*a*%20"] {
-  color: var(--relationship&);
+  color: var(--atrelationship);
   background-color: var(--prfcClr);
 }
 
