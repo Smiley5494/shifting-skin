@@ -284,7 +284,7 @@ a.cloud8,
 /* makes the hover colour on the headings match the main upper level */
 #header .primary li:not(.search):hover,
 #header .primary li a:hover {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
 /* greetings, warnings, errors */
