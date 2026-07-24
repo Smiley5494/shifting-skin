@@ -364,7 +364,7 @@ div:has(> p.kudos)::before {
 
 /* lets add that superscript in here too */
 #header > h1 > a > span::after {
-  content: " Mobile Mode" !important;
+  content: " ♡" !important;
   vertical-align: super;
   font-size: 14px;
   font-style: italic;
