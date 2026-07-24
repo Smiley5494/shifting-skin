@@ -281,6 +281,12 @@ a.cloud8,
   color: var(--accent);
 }
 
+/* makes the hover colour on the headings match the main upper level */
+#header .primary li:not(.search):hover,
+#header .primary li a:hover {
+  color: var(--accent);
+}
+
 /* greetings, warnings, errors */
 #greeting .icon,
 #dashboard,
