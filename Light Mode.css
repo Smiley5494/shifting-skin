@@ -34,7 +34,7 @@
 
   /* languages and body text colours */
   --en: #169f06;
-  --lang: #9E91FF;
+  --lang: #4F39F6;
   --blockquotes: #3AACFF;
   --italics: #debdef;
   --bold: #ca97d8;
@@ -49,6 +49,23 @@
   --atrelationship: #80deea;
   --chara: #facf66;
   --freeform: #d1c4e9;
+}
+
+/* Border colours for languages */
+.work.blurb:not(:has(dd[lang$="en"])) {
+  border: 2px solid var(--lang);
+  border-radius: 10px;
+}
+
+.blurb:has(dd[lang=en]) {
+  border: 2px solid var(--en);
+  border-radius: 10px;
+}
+
+/* Border colour for series */
+.blurb:has(dt.works) {
+  border: 2px solid var(--text);
+  border-radius: 10px;
 }
 
 /* Set the background colouring of listed works in bookmarks/search: this is done per rating */
