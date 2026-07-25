@@ -144,7 +144,7 @@ ol.index.group a.tag {
   
 /* This changes the colour of "&" relationships */
 div:has(.commas) [class^="relationship"] a.tag[href*="%20*a*%20"] {
-  color: var(--text)
+  color: var(--text);
   background-color: var(--atrelationship);
 }
 
