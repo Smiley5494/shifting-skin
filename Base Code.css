@@ -44,7 +44,6 @@ a.tag:link,
 }
 
 /* Tag scrolling, scrolling on user fandoms */
-
 li.blurb .tags,
 h5.fandoms.heading,
 h5.tags.heading a.tag,
@@ -54,14 +53,12 @@ h5.tags.heading a.tag,
 }
 
 /* Hide socials and marked for later from the home page */
-
 .odd.module.readings.random,
 .social.module.odd {
   display: none;
 }
 
 /* Wipes decorations on user fandoms to make them match tags */
-
 #user-fandoms.fandom.listbox.group a {
   text-decoration: none;
   border-bottom: none;
@@ -83,7 +80,6 @@ h5.fandoms.heading {
 }
 
 /* removes borders on favourited tags */
-
 .favorite a.tag {
   border: none;
 }
@@ -145,20 +141,19 @@ h5.tags.heading a.tag:hover,
 .work .relationship a.tag:hover,
 .work .category a.tag:hover,
 .work .rating a.tag:hover,
-.meta.tags a.tag:hover {
-  background-color: #900;
-  color: white;
+.meta.tags a.tag:hover,
+ol.index.group a.tag:hover {
+  background-color: var(--accent);
+  color: var(--text);
 }
 
 /* makes the hover on the border/header match across both */
-
 #header .primary li:not(.search):hover,
 #header .primary li a:hover {
-  color: #900;
+  color: var(--accent);
 }
 
 /* From here on it's ElectricAlice's flat buttons skin, with some modifications to catch the buttons that theirs misses. */
-
 .actions a,
 .actions a:link,
 .action,
@@ -362,7 +357,6 @@ ul.notes,
 }
 
 /* Font sizing and font families! if you want to change sizing use decimals first, if you want specific fonts set them to the first in the list */
-
 body,
 #header,
 #outer.wrapper,
@@ -425,7 +419,6 @@ dt.warning.tags a {
 }
 
 /* here we start rounding shit haha */
-
 li.blurb,
 li.comment {
   border-radius: 8px;
@@ -475,67 +468,18 @@ div#add_comment {
   border-radius: 10px;
 }
 
-/* This removes the delete buttons from as many places as i could remember */
-
-.splash .reading .actions li:has([value="Delete from History"]) {
-  display: none;
-}
-
-.splash .comment .actions li:has(input[value="Delete"]) {
-  display: none;
-}
-
-li:has(a[href$="/readings/confirm_clear"]) {
-  display: none;
-}
-
-.readings-index ul.actions:has(input[value="Delete from History"]) {
-  display: none;
-}
-
-li:has(a[data-confirm][data-method="delete"][href*="/users/"]) {
-  display: none;
-}
-
-/* same with orphaning */
-
-li:has(a[href*="/orphans/new?work"]) {
-  display: none;
-}
-
-li:has(a[href*="/works"][data-method="delete"]) {
-  display: none;
-}
-
-li:has(a[href*="/orphans/new?series"]) {
-  display: none;
-}
-
-li:has(a[href*="/series"][data-method="delete"]) {
-  display: none;
-}
-
-li:has(a[href*="/subscriptions/confirm_delete_all"]) {
-  display: none;
-}
-
-/* this hides the "you have muted users" banner, it was getting annoying */
-
-p.muted.notice {
-  display: none;
-}
-
-/* this hides the skins section from the footer */
-
-/* #footer .menu li:has([action="/skins/unset"]),
-#footer .menu li:has([action="/skins/891/set"]),
-#footer .menu li:has([action="/skins/929/set"]),
-#footer .menu li:has([action="/skins/932/set"]) {
-  display: none;
-} */
-
-/* this hides the reject gift button */
-
+/* This removes the delete/orphan buttons from as many places as i could remember */
+.splash .reading .actions li:has([value="Delete from History"]),
+.splash .comment .actions li:has(input[value="Delete"]),
+li:has(a[href$="/readings/confirm_clear"]),
+.readings-index ul.actions:has(input[value="Delete from History"]),
+li:has(a[data-confirm][data-method="delete"][href*="/users/"]),
+li:has(a[href*="/orphans/new?work"]),
+li:has(a[href*="/works"][data-method="delete"]), 
+li:has(a[href*="/orphans/new?series"]),
+li:has(a[href*="/series"][data-method="delete"]),
+li:has(a[href*="/subscriptions/confirm_delete_all"]),
+p.muted.notice,
 .gift p:has(a[href*="/toggle_rejected"]) {
   display: none;
 }
