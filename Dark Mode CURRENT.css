@@ -544,7 +544,8 @@ h5.tags.heading a.tag:hover,
 .work .relationship a.tag:hover,
 .work .category a.tag:hover,
 .work .rating a.tag:hover,
-.meta.tags a.tag:hover {
+.meta.tags a.tag:hover,
+ol.index.group a.tag:hover {
   background-color: var(--accent) !important;
   color: black !important;
   -webkit-background-clip: none;
@@ -588,7 +589,8 @@ h5.fandoms.heading a.tag,
 .work .fandom a.tag,
 h5.tags.heading a.tag,
 #user-fandoms.fandom.listbox.group li,
-#user-fandoms.fandom.listbox.group a {
+#user-fandoms.fandom.listbox.group a,
+ol.index.group a.tag {
   color: var(--fandom);
   background-color: var(--prfcClr);
 }
