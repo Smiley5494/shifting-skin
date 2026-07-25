@@ -84,7 +84,6 @@ h5.fandoms.heading {
 }
 
 /* adds borders and text decorations to Rape/Non-Con and Underage tags This highlights them in the warnings and in freeforms (if they're linked in the archive's system */
-
 a.tag[href*="Rape*s*Non-Con/works"],
 a.tag[href*="Underage%20Sex/works"] {
   border: 2px solid;
@@ -93,7 +92,6 @@ a.tag[href*="Underage%20Sex/works"] {
 }
 
 /* removes the bolding from fandom tags and archive warnings makes them match the styling of other tags */
-
 a.tag[href*="tags/No%20Archive%20Warnings%20Apply/works"],
 h5.fandoms.heading a.tag,
 .work .fandom a.tag,
@@ -143,7 +141,7 @@ h5.tags.heading a.tag:hover,
 .meta.tags a.tag:hover,
 ol.index.group a.tag:hover {
   background-color: var(--accent);
-  color: var(--text);
+  color: var(--UI_ftr);
 }
 
 /* makes the hover on the border/header match across both */
