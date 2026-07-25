@@ -1,19 +1,3 @@
-/* Border colours for languages */
-.work.blurb:not(:has(dd[lang$="en"])) {
-  border: 2px solid #4F39F6;
-  border-radius: 10px;
-}
-
-.blurb:has(dd[lang=en]) {
-  border: 2px solid #169f06;
-  border-radius: 10px;
-}
-
-/* Border colour for series */
-.blurb:has(dt.works) {
-  border: 2px solid black;
-  border-radius: 10px;
-}
 
 /* Hide AI generated works */
 .blurb:has(a[href$="/tags/AI-Generated%20Text/works"]),
@@ -21,8 +5,18 @@
   display: none !important;
 }
 
-/* Set up tag shapes */
+/* this changes the colour of authors notes, and summaries within a work */
+div.preface.group {
+  background-color: var(--prfcclr);
+}
 
+/* this is in the base code so it might not be needed here, but this makes the hover of the headings match */
+#header .primary li:not(.search):hover,
+#header .primary li a:hover {
+  color: var(--accent) !important;
+}
+
+/* Set up tag shapes */
 a.tag,
 a.tag:visited,
 a.tag:link,
