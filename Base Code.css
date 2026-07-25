@@ -1,4 +1,19 @@
+/* Border colours for languages */
+.work.blurb:not(:has(dd[lang$="en"])) {
+  border: 2px solid;
+  border-radius: 10px;
+}
 
+.blurb:has(dd[lang=en]) {
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+/* Border colour for series */
+.blurb:has(dt.works) {
+  border: 2px solid;
+  border-radius: 10px;
+}
 /* Hide AI generated works */
 .blurb:has(a[href$="/tags/AI-Generated%20Text/works"]),
 .blurb:has(a[href$="/tags/Created%20Using%20Generative%20AI/works"]) {
