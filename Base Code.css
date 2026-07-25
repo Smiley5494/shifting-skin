@@ -140,8 +140,8 @@ h5.tags.heading a.tag:hover,
 .work .rating a.tag:hover,
 .meta.tags a.tag:hover,
 ol.index.group a.tag:hover {
-  background-color: var(--accent);
-  color: var(--UI_ftr);
+  background-color: var(--accent) !important;
+  color: var(--UI_ftr) !important;
 }
 
 /* makes the hover on the border/header match across both */
