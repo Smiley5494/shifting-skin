@@ -53,8 +53,12 @@ h5.tags.heading a.tag,
 }
 
 /* Hide socials and marked for later from the home page */
+/* Hides the expand fandoms button; this button isn't needed with scrolling */
 .odd.module.readings.random,
-.social.module.odd {
+.social.module.odd,
+p.actions a#expand-fandoms,
+li.previous span.disabled,
+li.next span.disabled {
   display: none;
 }
 
@@ -62,11 +66,6 @@ h5.tags.heading a.tag,
 #user-fandoms.fandom.listbox.group a {
   text-decoration: none;
   border-bottom: none;
-}
-
-/* Hides the expand fandoms button; this button isn't needed with scrolling */
-p.actions a#expand-fandoms {
-  display: none;
 }
 
 /* hides commas on tags */
@@ -783,10 +782,6 @@ img[src$="/images/lockred.png"] {
 
 /* This removes navigation buttons that have no use, aka the previous page button when you're already on page 1. Comes from ravenothere */
 
-li.previous span.disabled,
-li.next span.disabled {
-  display: none;
-}
 
 /* i dont remember what this was for or where it came from, but it removes the background from a bunch of stuff */
 
