@@ -546,8 +546,6 @@ h5.tags.heading a.tag:hover,
 .work .rating a.tag:hover,
 .meta.tags a.tag:hover,
 ol.index.group a.tag:hover {
-  background-color: var(--accent) !important;
-  color: black !important;
   -webkit-background-clip: none;
   -moz-background-clip: none;
 }
