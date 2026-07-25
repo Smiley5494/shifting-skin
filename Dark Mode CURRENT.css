@@ -528,28 +528,6 @@ div.preface.group {
   background-color: var(--prfcClr);
 }
 
-/* the colour of hovering over tags */
-.tags li.freeforms a.tag:hover,
-.work .freeform a.tag:hover,
-.tags li.characters a.tag:hover,
-.work .character a.tag:hover,
-h5.fandoms.heading a.tag:hover,
-h5.tags.heading a.tag:hover,
-#user-fandoms.fandom.listbox.group li:hover,
-#user-fandoms.fandom.listbox.group a:hover,
-.work .fandom a.tag:hover,
-.tags li.warnings a.tag:hover,
-.work .warning a.tag:hover,
-.tags li.relationships a.tag:hover,
-.work .relationship a.tag:hover,
-.work .category a.tag:hover,
-.work .rating a.tag:hover,
-.meta.tags a.tag:hover,
-ol.index.group a.tag:hover {
-  -webkit-background-clip: none;
-  -moz-background-clip: none;
-}
-
 /* warning tags */
 a.tag[href*="Choose%20Not%20To%20Use%20Archive%20Warnings/works"],
 a.tag[href*="Graphic%20Depictions%20Of%20Violence/works"],
